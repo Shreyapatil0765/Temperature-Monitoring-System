@@ -1,0 +1,29 @@
+#include <Wire.h>
+#include <Adafruit_LiquidCrystal.h>
+
+Adafruit_LiquidCrystal lcd_1(32); 
+const int tempPin = A0;
+
+void setup() {
+  lcd_1.begin(16, 2);
+  Serial.begin(9600);
+  lcd_1.setCursor(0, 0);
+  lcd_1.print("Temperature:");
+}
+
+void loop() {
+  int analogValue = analogRead(tempPin);  // 0–1023
+  float voltage = analogValue * (5.0 / 1023.0);  // Voltage from sensor
+  int tempC = (voltage - 0.5) * 100.0;  // TMP36 formula
+
+  lcd_1.setCursor(0, 1);
+  lcd_1.print("     "); // Clear line
+  lcd_1.setCursor(0, 1);
+  lcd_1.print(tempC);
+  lcd_1.print(" C");
+
+  Serial.print(tempC);
+  Serial.println("C");
+
+  delay(1000);
+}
