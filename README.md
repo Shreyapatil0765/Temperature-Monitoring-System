@@ -1,5 +1,17 @@
 # Temperature-Monitoring-System
 
+Company: CODTECH IT SOLUTIONS
+
+NAME: SHREYA PATIL
+
+INTERN ID: CT04DF2846
+
+DOMAIN: EMBEDDED SYSTEMS
+
+DURATION: 4 WEEKS
+
+MENTOR: NEELA SANTOSH
+
 INTRO : 
 
 This project involves developing a Temperature Monitoring System using an Arduino Uno, a TMP36 analog temperature sensor, and a 16x2 LCD display with an I2C interface. The system is designed to measure ambient temperature in real time and display the output on an LCD screen. It demonstrates key embedded system concepts such as analog-to-digital conversion, sensor interfacing, and communication using the I2C protocol.
